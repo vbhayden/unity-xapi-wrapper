@@ -30,7 +30,7 @@ namespace XAPI
             // Get our individual units
             int year = utc.Year;
             int month = utc.Month;
-            int day = utc.Day - 1;
+            int day = utc.Day;
             int hour = utc.Hour;
             int mins = utc.Minute;
             int secs = utc.Second;
