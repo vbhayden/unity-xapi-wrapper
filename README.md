@@ -56,8 +56,11 @@ Once that's assigned, save the project and the wrapper will send all of its stat
 The `XAPIWrapper` class is intended to be your interface into sending and receiving xAPI statements with the configured LRS,
 but the `XAPI` namespace also contains classes for contructing those statements.  As of writing, these objects use the following
 convention:
-- Statement components begin with `X___` (XActor, XVerb, XActivity, etc)
-- Statement objects do not.
+- xAPI statement components begin with `X___` (XActor, XVerb, XActivity, etc)
+- All other xAPI-relevant objects do not.  This includes:
+  - Statement
+  - StatementQuery
+  - StatementResult
 
 To build an xAPI statement, you will need an actor, a verb, and an object.  For verbs, there's a sealed helper class `XVerbs` 
 that has a collection of predefined verbs for use, but actors and objects need their own declaration.  The following snippet
