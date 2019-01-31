@@ -97,12 +97,4 @@ XAPIWrapper.SendStatement(this.actor, XVerbs.Interacted, this.activity, callback
 ```
 
 ### Example Scenes
-There are two example scenes that you can use to check functionality:
-- A simple example where you send statements by pushing a UI button.
-- A more complicated example with several UI controls.  As this scene is intended to show how to implement various 
-UI controls and events with xAPI, it:
-  - has multiple controls that all send statements,
-  - can save its UI state to an LRS with an xAPI statement, and
-  - can restore its state by retrieving that same xAPI statement from the LRS.
-
-Additional non-UI scenes will be added in the future with more practical examples.
+Example scenes have been removed from this project and will be included later.
