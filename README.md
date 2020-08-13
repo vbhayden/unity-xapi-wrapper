@@ -56,13 +56,13 @@ Once that's assigned, save the project and the wrapper will send all of its stat
 The `XAPIWrapper` class is intended to be your interface into sending and receiving xAPI statements with the configured LRS,
 but the `XAPI` namespace also contains classes for contructing those statements.  As of writing, these objects use the following
 convention:
-- xAPI statement components begin with `X___` (XActor, XVerb, XActivity, etc)
+- xAPI statement components begin with `X___` (Actor, Verb, Activity, etc)
 - All other xAPI-relevant objects do not.  This includes:
   - Statement
   - StatementQuery
   - StatementResult
 
-To build an xAPI statement, you will need an actor, a verb, and an object.  For verbs, there's a sealed helper class `XVerbs` 
+To build an xAPI statement, you will need an actor, a verb, and an object.  For verbs, there's a sealed helper class `Verbs` 
 that has a collection of predefined verbs for use, but actors and objects need their own declaration.  The following snippet
 is from the Sample scene:
 ```
@@ -70,11 +70,11 @@ is from the Sample scene:
 var domain = "http://example.com";
 
 // Create our objects
-this.actor = XActor.FromAccount(domain, "some-key-relevant-to-homepage", false, "Example Actor Name");
-this.activity = new XActivity(domain + "/simple-example", "Simple Unity Example");
+this.actor = Actor.FromAccount(domain, "some-key-relevant-to-homepage", false, "Example Actor Name");
+this.activity = new Activity(domain + "/simple-example", "Simple Unity Example");
 
 // Send the statement
-XAPIWrapper.SendStatement(this.actor, XVerbs.Interacted, this.activity);
+XAPIWrapper.SendStatement(this.actor, Verbs.Interacted, this.activity);
 ```
 Additionally, a callback can be provided to receive information about the LRS response, including the stored statement ID:
 ```
@@ -93,7 +93,7 @@ void SendStatementCallback(Statement statement, string statementKey, UnityWebReq
 ```
 Which would then be supplied with:
 ```
-XAPIWrapper.SendStatement(this.actor, XVerbs.Interacted, this.activity, callback: this.SendStatementCallback);
+XAPIWrapper.SendStatement(this.actor, Verbs.Interacted, this.activity, callback: this.SendStatementCallback);
 ```
 
 ### Example Scenes
