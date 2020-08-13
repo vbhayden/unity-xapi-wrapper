@@ -6,7 +6,7 @@ if you are solely interested in having your Unity project send and receive xAPI 
 
 Using the functions and classes in this library might be a bit difficult if you are unfamiliar with xAPI.
 
-**Note: While this library has been used for several ADL projects without issue, it's still in development.**
+**Note: While this library has been used for a few projects without issue, it's still in development.**
 
 Issus and pull requests are welcome! 🎈👏
 
