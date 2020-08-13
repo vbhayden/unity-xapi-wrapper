@@ -18,8 +18,8 @@ The setup will seem a bit involved, but most of this will just be typical Unity 
 To ensure the wrapper is working within your project:
 - Open Unity
 - Extract the required JSON.Net version for your system (see below)
-- (Optional) Create an LRS configuration (see below)
 - Open the example scene (`/Examples/Buttons`)
+- (Optional) Create an LRS configuration (see below)
 - (Optional) Assign your LRS configuration
 - Run the example scene to check if everything's behaving ☕
 
