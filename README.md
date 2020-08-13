@@ -12,7 +12,7 @@ Issus and pull requests are welcome! 🎈👏
 
 ## Setup
 The setup will seem a bit involved, but most of this will just be typical Unity pageantry.  To get the project:
-- Get the project (download as zip or clone with `git clone https://github.com/vbhayden/unity-xapi-wrapper`)
+- Get the project (download as zip or clone)
 - Drop into your Unity project's Assets folder
 
 To ensure the wrapper is working within your project:
