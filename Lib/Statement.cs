@@ -15,7 +15,7 @@ namespace XAPI
 		/// </summary>
 		/// <value>The main actor.</value>
 		[JsonProperty("actor", NullValueHandling = NullValueHandling.Ignore)]
-		public Actor MainActor
+		public Actor Actor
 		{
 			get { return this.mainActor; }
 			set { this.mainActor = value; }
@@ -26,7 +26,7 @@ namespace XAPI
 		/// </summary>
 		/// <value>The main actor.</value>
 		[JsonProperty("verb", NullValueHandling = NullValueHandling.Ignore)]
-		public Verb MainVerb
+		public Verb Verb
 		{
 			get { return this.mainVerb; }
 			set { this.mainVerb = value; }
@@ -39,7 +39,7 @@ namespace XAPI
 		/// </summary>
 		/// <value>The main actor.</value>
 		[JsonProperty("object", NullValueHandling = NullValueHandling.Ignore)]
-		public Object MainObject
+		public Object Object
 		{
 			get { return this.mainObject; }
 			set { this.mainObject = value; }
@@ -50,7 +50,7 @@ namespace XAPI
 		/// </summary>
 		/// <value>The main actor.</value>
 		[JsonProperty("result", NullValueHandling = NullValueHandling.Ignore)]
-		public Result MainResult
+		public Result Result
 		{
 			get { return this.mainResult; }
 			set { this.mainResult = value; } 
@@ -61,7 +61,7 @@ namespace XAPI
 		/// </summary>
 		/// <value>The main actor.</value>
 		[JsonProperty("context", NullValueHandling = NullValueHandling.Ignore)]
-		public Context MainContext
+		public Context Context
 		{
 			get { return this.mainContext; }
 			set { this.mainContext = value; } 
@@ -189,18 +189,18 @@ namespace XAPI
         {
             get
             {
-                if (this.MainObject is Activity)
+                if (this.Object is Activity)
                 {
-                    var activity = this.MainObject as Activity;
+                    var activity = this.Object as Activity;
                     var displayName = activity.Id;
                     if (activity.Definition != null && activity.Definition.HasNameKey("en-US"))
                         displayName = activity.Definition.NamePairs["en-US"];
 
-                    return string.Format("{0}, {1}, {2}", this.MainActor.Name, this.MainVerb.Name, displayName);
+                    return string.Format("{0}, {1}, {2}", this.Actor.Name, this.Verb.Name, displayName);
                 }
                 else
                 {
-                    return string.Format("{0}, {1}, {2}", this.MainActor.Name, this.MainVerb.Name, "unknown object");
+                    return string.Format("{0}, {1}, {2}", this.Actor.Name, this.Verb.Name, "unknown object");
                 }
             }
         }

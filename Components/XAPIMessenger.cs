@@ -38,7 +38,7 @@ namespace XAPI
             }
             else
             {
-                Debug.LogErrorFormat("LRS CONFIGURATION MISSING FROM XAPI LISTENER.  YOU MUST ASSIGN A CONFIGURATION.");
+                Debug.LogErrorFormat("LRS CONFIGURATION MISSING FROM XAPI MESSENGER.  YOU MUST ASSIGN A CONFIGURATION.");
             }
         }
 
@@ -231,7 +231,7 @@ namespace XAPI
             // Correct Actor IFI Types
             for (int k=0; k<result.StatementCount; k++)
             {
-                result.Statements[k].MainActor.ifi = result.Statements[k].MainActor.GuessIFI();
+                result.Statements[k].Actor.ifi = result.Statements[k].Actor.GuessIFI();
             }
 
             // Make the callback
@@ -260,7 +260,7 @@ namespace XAPI
             Statement statement = JsonConvert.DeserializeObject<Statement>(request.downloadHandler.text);
 
             // Fix IFI
-            statement.MainActor.ifi = statement.MainActor.GuessIFI();
+            statement.Actor.ifi = statement.Actor.GuessIFI();
 
             // Make the callback
             callback(statement, request);

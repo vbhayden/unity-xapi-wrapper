@@ -78,7 +78,7 @@ namespace XAPI
 		/// </summary>
 		/// <value>The max.</value>
 		[JsonProperty("score", NullValueHandling = NullValueHandling.Ignore)]
-		public XScore Score
+		public Score Score
 		{
 			get { return this.score; }
 			set { this.score = value; }
@@ -118,7 +118,7 @@ namespace XAPI
 		private bool? completion;
 		private string response;
 		private TimeSpan duration;
-		private XScore score;
+		private Score score;
 		private Dictionary<string, object> extensions;
 
 		/// <summary>
@@ -149,7 +149,7 @@ namespace XAPI
 	/// Score Object for an XAPI Statement's Result Object.
 	/// </summary>
 	[System.Serializable]
-	public class XScore
+	public class Score
 	{
 		/// <summary>
 		/// Gets or Sets the raw score.
@@ -213,7 +213,7 @@ namespace XAPI
 		/// All values are optional, the Spec does not require anything for a Score object.
 		/// </summary>
 		[JsonConstructor]
-		public XScore(float? raw = null, float? min = null, float? max = null)
+		public Score(float? raw = null, float? min = null, float? max = null)
 		{
 			this.raw = raw;
 			this.min = min;

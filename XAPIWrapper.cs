@@ -90,7 +90,7 @@ namespace XAPI
             var statement = new Statement(Actor, Verb, Activity);
 
             if (Result != null)
-                statement.MainResult = Result;
+                statement.Result = Result;
 
             XAPIWrapper.SendStatement(statement, callback);
         }
