@@ -59,7 +59,7 @@ The `XAPIWrapper` class is intended to be your interface into sending and receiv
 and conversions.
 
 From the included "Button" example:
-```
+```csharp
 public void SendSimpleStatement()
 {
     var actor = Actor.FromAccount("https://auth.example.com", "some-long-user-id", name: "some-user-name");
