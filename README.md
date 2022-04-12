@@ -38,7 +38,7 @@ included in this project that contains 3 distributions of JSON.Net:
 - AOT
 - Windows
 
-Within Unity, double click the `JSON.Net Assemblies` file and extract the desired version.  This should correct the sea of compiler
+Within Unity, double click the `Json.Net` Unity Package and extract the desired version (see below if confused).  This should correct the sea of compiler
 errors and allow the example scene to run.
 
 ### Creating an LRS Configuration
