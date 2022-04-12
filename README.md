@@ -87,7 +87,7 @@ As this example is a bit dull, additional example scenes are welcome via either 
 ### Which Json.Net Version to Import?
 When you double click the Json.NET Unity Package, there will be 3 options to choose from:
 - .NET Standard 2.0 (most common)
-- .NET 4.0
+- .NET 4.0 (available for newer versions of Unity)
 - .NET 4.5
 
 ![Json.NET Unity Package Import UI](https://i.imgur.com/yzcpGec.png)
