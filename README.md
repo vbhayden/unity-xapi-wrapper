@@ -30,14 +30,24 @@ While the example scene should work without issue, there are a few additional st
 in a specified LRS -- namely: importing the required JSON.Net library and creating LRS configurations.
 
 ### Extracting JSON.Net
-This wrapper relies on the excellent JSON.Net library to handle its JSON serialization.  For convenience, an asset package has been
-included in this project that contains 3 distributions of JSON.Net:
-- Standalone (Recommended)
-- AOT
-- Windows
-
 Within Unity, double click the `Json.Net` Unity Package and extract the desired version (see below if confused).  This should correct the sea of compiler
 errors and allow the example scene to run.
+
+When you double click the Json.NET Unity Package, there will be 3 options to choose from:
+- .NET Standard 2.0 (most common)
+- .NET 4.0 (available for newer versions of Unity)
+- .NET 4.5
+
+![Json.NET Unity Package Import UI](https://i.imgur.com/yzcpGec.png)
+
+Import the one matching your project's build settings, which can be checked at
+```
+Edit > Project Settings > Player > Api Compatibility Level
+```
+![Unity Project Settings](https://i.imgur.com/vEfGztT.png)
+
+There may be subtle differences between their `.NET 4.0` and `.NET 4.5` libraries, so mileage may vary between them.  
+
 
 ### Creating an LRS Configuration
 To communicate with an LRS, the wrapper needs to know which LRS you intend to use.  To create a new
@@ -80,20 +90,5 @@ There is a simple example scene included that demonstrates how to send three dif
 - A pair of simple statements
 - A more complex statement using `result` and `context` with extensions
 
-As this example is a bit dull, additional example scenes are welcome via either suggestion (issue) or even a pull request. 👏
+As this example is a bit dull, additional 
 
-### Which Json.Net Version to Import?
-When you double click the Json.NET Unity Package, there will be 3 options to choose from:
-- .NET Standard 2.0 (most common)
-- .NET 4.0 (available for newer versions of Unity)
-- .NET 4.5
-
-![Json.NET Unity Package Import UI](https://i.imgur.com/yzcpGec.png)
-
-Import the one matching your project's build settings, which can be checked at
-```
-Edit > Project Settings > Player > Api Compatibility Level
-```
-![Unity Project Settings](https://i.imgur.com/vEfGztT.png)
-
-There may be subtle differences between their `.NET 4.0` and `.NET 4.5` libraries, so mileage may vary between them.  
