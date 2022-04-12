@@ -83,3 +83,19 @@ There is a simple example scene included that demonstrates how to send three dif
 - A more complex statement using `result` and `context` with extensions
 
 As this example is a bit dull, additional example scenes are welcome via either suggestion (issue) or even a pull request. 👏
+
+### Which Json.Net Version to Import?
+When you double click the Json.NET Unity Package, there will be 3 options to choose from:
+- .NET Standard 2.0 (most common)
+- .NET 4.0
+- .NET 4.5
+
+![Json.NET Unity Package Import UI](https://i.imgur.com/yzcpGec.png)
+
+Import the one matching your project's build settings, which can be checked at
+```
+Edit > Project Settings > Player > Api Compatibility Level
+```
+![Unity Project Settings](https://i.imgur.com/vEfGztT.png)
+
+There may be subtle differences between their `.NET 4.0` and `.NET 4.5` libraries, so mileage may vary between them.  
