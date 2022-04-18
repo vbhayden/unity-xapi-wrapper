@@ -5,7 +5,7 @@
 [Bb]uilds/
 Assets/AssetStoreTools*
 
-*.meta
+# *.meta
 
 # Visual Studio cache directory
 .vs/
@@ -35,3 +35,6 @@ sysinfo.txt
 
 # Builds
 *.apk
+/Json.NET.unitypackage.meta
+/LICENSE.meta
+/README.md.meta
