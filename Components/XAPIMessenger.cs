@@ -148,7 +148,7 @@ namespace XAPI
             {
                 if (callback != null)
                 {
-                    callback(new StatementStoredResponse {
+                    callback(new StatementStoredResponse () {
                         Request = res.Request,
                         Statement = res.Statements == null ? null : res.Statements[0],
                         StatementID = res.StatementIDs == null ? null : res.StatementIDs[0]

@@ -1,4 +1,3 @@
-!! This repo **has moved into the [ADL GitHub account](https://github.com/adlnet/Unity-xAPI-Wrapper/)!** !!
 # Unity xAPI Wrapper
 Library for interacting with an LRS from within a Unity project.
 
