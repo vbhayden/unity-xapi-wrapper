@@ -32,7 +32,7 @@ namespace  XAPI
             this.config.Endpoint = EditorGUILayout.TextField("Endpoint", this.config.Endpoint);
 
             // Select the Authorization Method
-            EditorGUILayout.Space(20);
+            GUILayout.Space(20);
             EditorGUILayout.HelpBox(
                 "The authorization method determines how this library will send your LRS credentials.  \n\n" +
                 "As different methods require different credentials, this will change the subsequent fields."
@@ -49,7 +49,7 @@ namespace  XAPI
                 default:
                 case LRSAuthMethod.Basic:
 
-                    EditorGUILayout.Space(20);
+                    GUILayout.Space(20);
                     EditorGUILayout.HelpBox(
                         "Basic authorization requires a username and password.  Use whichever credentials you use to log into your LRS. "
                         , MessageType.None
@@ -60,7 +60,7 @@ namespace  XAPI
 
                 case LRSAuthMethod.BasicEncoded:
 
-                    EditorGUILayout.Space(20);
+                    GUILayout.Space(20);
                     EditorGUILayout.HelpBox(
                         "If your LRS provides a generic, pre-encoded basic auth string, then use that here."
                         , MessageType.None
@@ -72,7 +72,7 @@ namespace  XAPI
             // Scoot back out
             EditorGUI.indentLevel = 0;
         
-            EditorGUILayout.Space(20);
+            GUILayout.Space(20);
             EditorGUILayout.HelpBox(
                 "Number of seconds to wait before an LRS-bound web request will time out."
                 , MessageType.None
